@@ -1,0 +1,37 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/ALU.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/IdExSegReg/AddrEx.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/ExMemSegReg/AddrMem.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/MemWbSegReg/AddrWb.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/IdExSegReg/BrTarget.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/BranchDecision.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/ControllerDecoder.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/IdExSegReg/CtrlEx.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/ExMemSegReg/CtrlMem.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/MemWbSegReg/CtrlWb.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/Cache/DataCache.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/DataExtend.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/GeneralRegister.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/Hazard.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/IfIdSegReg/IR.v" \
+"../../../../Lab2.srcs/sources_1/new/Imm.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/ImmExtend.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/Cache/InstructionCache.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/NPCGenerator.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/IdExSegReg/Op1.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/PC.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/IdExSegReg/PcEx.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/IfIdSegReg/PcId.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/RV32ICore.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/IdExSegReg/Reg2Ex.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/ExMemSegReg/Reg2Mem.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/ExMemSegReg/Result.v" \
+"../../../../Lab2.srcs/sources_1/imports/SourceCode/MemWbSegReg/WbData.v" \
+"../../../../Lab2.srcs/sim_1/imports/Simulation/testBench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

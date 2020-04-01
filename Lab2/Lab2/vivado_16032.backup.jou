@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Apr  1 19:50:37 2020
+# Process ID: 16032
+# Current directory: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12476 D:\GitHub_local_repos\USTC-ComputerArchitecture-2020S\Lab2\Lab2\Lab2.xpr
+# Log file: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2/vivado.log
+# Journal file: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2/Lab2.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+refresh_design
+close_design
+export_ip_user_files -of_objects  [get_files D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2/Lab2.srcs/sim_1/imports/Simulation/testBench.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2/Lab2.srcs/sim_1/imports/Simulation/testBench.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -force -norecurse C:/Users/65767/Desktop/Lab2/Simulation/testBench.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source testBench.tcl
+set_property -name {xsim.simulate.runtime} -value {100000ns} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source testBench.tcl
+close_sim
+set_property -name {xsim.simulate.runtime} -value {20000ns} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+launch_simulation
+source testBench.tcl
+close_sim
+launch_simulation
+source testBench.tcl
+close_sim
