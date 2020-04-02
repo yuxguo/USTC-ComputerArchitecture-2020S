@@ -48,7 +48,10 @@ module ControllerDecoder(
     output reg [2:0] load_type,
     output reg reg_write_en,
     output reg [3:0] cache_write_en,
-    output reg [2:0] imm_type
+    output reg [2:0] imm_type,
+    // CSR signals
+    output reg CSR_write_en,
+    output reg CSR_zimm_or_reg
     );
 
     // TODO: Complete this module
@@ -73,6 +76,8 @@ module ControllerDecoder(
             reg_write_en = 1;
             cache_write_en = 0;
             imm_type = `UTYPE;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
         end
         else if (opcode == `U_AUIPC)
         begin
@@ -88,6 +93,8 @@ module ControllerDecoder(
             reg_write_en = 1;
             cache_write_en = 0;
             imm_type = `UTYPE;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
         end
         else if (opcode == `J_JAL)
         begin
@@ -103,6 +110,8 @@ module ControllerDecoder(
             reg_write_en = 1;
             cache_write_en = 0;
             imm_type = `JTYPE;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
         end
         else if (opcode == `J_JALR)
         begin
@@ -118,6 +127,8 @@ module ControllerDecoder(
             reg_write_en = 1;
             cache_write_en = 0;
             imm_type = `ITYPE;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
         end
         else if (opcode == `B_TYPE)
         begin
@@ -133,6 +144,8 @@ module ControllerDecoder(
             reg_write_en = 0;
             cache_write_en = 0;
             imm_type = `BTYPE;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
             if (funct3 == `B_BEQ)
             begin
                 br_type = `BEQ;
@@ -176,6 +189,8 @@ module ControllerDecoder(
             reg_write_en = 1;
             cache_write_en = 0;
             imm_type = `ITYPE;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
             if (funct3 == `I_LB)
             begin
                 load_type = `LB;
@@ -216,6 +231,8 @@ module ControllerDecoder(
             reg_write_en = 1;
             cache_write_en = 0;
             imm_type = `ITYPE;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
             if (funct3 == `I_ADDI)
             begin
                 ALU_func = `ADD;
@@ -280,7 +297,8 @@ module ControllerDecoder(
             reg_write_en = 0;
             cache_write_en = 1;
             imm_type = `STYPE;
-
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
             if (funct3 == `S_SB)
             begin
                 cache_write_en = 4'b0001;
@@ -312,6 +330,8 @@ module ControllerDecoder(
             reg_write_en = 1;
             cache_write_en = 0;
             imm_type = 0;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
             if (funct3 == `R_AS)
             begin
                 if (funct7 == `R_ADD)
@@ -374,6 +394,60 @@ module ControllerDecoder(
                 reg_write_en = 0;
             end
         end
+        else if (opcode == `I_CSR)
+        begin
+            jal = 0;
+            jalr = 0;
+            op1_src = 0;
+            op2_src = 0;
+            ALU_func = 0;
+            br_type = 0;
+            load_npc = 0;
+            wb_select = 0;
+            load_type = 0;
+            reg_write_en = 1;
+            cache_write_en = 0;
+            imm_type = 0;
+            CSR_write_en = 1;
+            
+            if (funct3 == `I_CSRRC)
+            begin
+                 ALU_func = `AND;
+                 CSR_zimm_or_reg = 0;
+            end
+            else if (funct3 == `I_CSRRCI)
+            begin
+                 ALU_func = `AND;
+                 CSR_zimm_or_reg = 1;
+            end
+            else if (funct3 == `I_CSRRS)
+            begin
+                ALU_func = `OR;
+                CSR_zimm_or_reg = 0;
+            end
+            else if (funct3 == `I_CSRRSI)
+            begin
+                ALU_func = `OR;
+                CSR_zimm_or_reg = 1;
+            end
+            else if (funct3 == `I_CSRRW)
+            begin
+                ALU_func = `OP1;
+                CSR_zimm_or_reg = 0;
+            end
+            else if (funct3 == `I_CSRRWI)
+            begin
+                ALU_func = `OP1;
+                CSR_zimm_or_reg = 1;
+            end
+            else 
+            begin
+                ALU_func = 0;
+                CSR_zimm_or_reg = 0;
+                CSR_write_en = 0;
+                reg_write_en = 0;
+            end
+        end
         else 
         begin
             jal = 0;
@@ -388,6 +462,8 @@ module ControllerDecoder(
             reg_write_en = 0;
             cache_write_en = 0;
             imm_type = 0;
+            CSR_write_en = 0;
+            CSR_zimm_or_reg = 0;
         end
     end
     

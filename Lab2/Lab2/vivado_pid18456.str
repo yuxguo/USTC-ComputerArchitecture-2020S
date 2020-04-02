@@ -1,0 +1,99 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 18456
+License: Customer
+
+Current time: 	Thu Apr 02 17:38:17 CST 2020
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 81 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	D:/xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	65767
+User home directory: C:/Users/65767
+User working directory: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/xilinx/Vivado
+HDI_APPROOT: D:/xilinx/Vivado/2018.2
+RDI_DATADIR: D:/xilinx/Vivado/2018.2/data
+RDI_BINDIR: D:/xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/65767/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/65767/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/65767/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	D:/xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2/vivado.log
+Vivado journal file location: 	D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2/vivado.jou
+Engine tmp dir: 	D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2/.Xil/Vivado-18456-GyxPC
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: D:/xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: D:/xilinx/Vivado/2018.2
+XILINX_SDK: D:/xilinx/SDK/2018.2
+XILINX_VIVADO: D:/xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: D:/xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	194 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 565 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// [GUI Memory]: 84 MB (+85706kb) [00:00:06]
+// [Engine Memory]: 469 MB (+340142kb) [00:00:06]
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: D:\GitHub_local_repos\USTC-ComputerArchitecture-2020S\Lab2\Lab2\Lab2.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2/Lab2.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 562 MB (+73381kb) [00:00:08]
+// Project name: Lab2; location: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab2/Lab2; part: xc7a100tcsg324-1
+// HMemoryUtils.trashcanNow. Engine heap size: 572 MB. GUI used memory: 41 MB. Current time: 4/2/20 5:38:17 PM CST
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 592 MB (+1950kb) [00:00:15]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32ICore (RV32ICore.v)]", 2); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RV32ICore (RV32ICore.v)]", 2); // B (D, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 592 MB. GUI used memory: 41 MB. Current time: 4/2/20 6:08:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 592 MB. GUI used memory: 39 MB. Current time: 4/2/20 6:38:18 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 592 MB. GUI used memory: 38 MB. Current time: 4/2/20 7:08:18 PM CST

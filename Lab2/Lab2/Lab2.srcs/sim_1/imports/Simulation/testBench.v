@@ -12,8 +12,8 @@
 // !!! ALL YOU NEED TO CHANGE IS 4 FILE PATH BELOW !!!	
 //				(they are all optional, you can run cpu without change paths here,if files are failed to open, we will not dump the content to .txt and will not try to initial your bram)
 //////////////////////////////////////////////////////////////////////////////////
-`define DataCacheContentLoadPath "D:\\GitHub_local_repos\\USTC-ComputerArchitecture-2020S\\Lab2\\Test\\test-data\\2testAll.data"
-`define InstCacheContentLoadPath "D:\\GitHub_local_repos\\USTC-ComputerArchitecture-2020S\\Lab2\\Test\\test-data\\2testAll.inst"
+`define DataCacheContentLoadPath "D:\\GitHub_local_repos\\USTC-ComputerArchitecture-2020S\\Lab2\\Test\\test-data\\3testAll.data"
+`define InstCacheContentLoadPath "D:\\GitHub_local_repos\\USTC-ComputerArchitecture-2020S\\Lab2\\Test\\test-data\\3testAll.inst"
 `define DataCacheContentSavePath "D:\\GitHub_local_repos\\USTC-ComputerArchitecture-2020S\\Lab2\\Test\\cache-dump\\DataCacheContent.txt"
 `define InstCacheContentSavePath "D:\\GitHub_local_repos\\USTC-ComputerArchitecture-2020S\\Lab2\\Test\\cache-dump\\InstCacheContent.txt"
 `define BRAMWORDS 4096  //a word is 32bit, so our bram is 4096*32bit

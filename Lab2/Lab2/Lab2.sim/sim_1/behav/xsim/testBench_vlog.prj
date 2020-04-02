@@ -6,6 +6,10 @@ verilog xil_defaultlib  \
 "../../../../Lab2.srcs/sources_1/imports/SourceCode/MemWbSegReg/AddrWb.v" \
 "../../../../Lab2.srcs/sources_1/imports/SourceCode/IdExSegReg/BrTarget.v" \
 "../../../../Lab2.srcs/sources_1/imports/SourceCode/BranchDecision.v" \
+"../../../../Lab2.srcs/sources_1/new/CSR_EX.v" \
+"../../../../Lab2.srcs/sources_1/new/CSR_MEM.v" \
+"../../../../Lab2.srcs/sources_1/new/CSR_Regfile.v" \
+"../../../../Lab2.srcs/sources_1/new/CSR_WB.v" \
 "../../../../Lab2.srcs/sources_1/imports/SourceCode/ControllerDecoder.v" \
 "../../../../Lab2.srcs/sources_1/imports/SourceCode/IdExSegReg/CtrlEx.v" \
 "../../../../Lab2.srcs/sources_1/imports/SourceCode/ExMemSegReg/CtrlMem.v" \

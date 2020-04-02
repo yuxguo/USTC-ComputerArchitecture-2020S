@@ -29,6 +29,8 @@
     `define SLT  4'd8
     `define SLTU  4'd9
     `define LUI  4'd10
+    `define OP1 4'd11
+    `define OP2 4'd12
 // br_type[2:0]
     `define NOBRANCH  3'd0
     `define BEQ  3'd1
@@ -105,6 +107,14 @@
     `define R_SRA 7'b0100000
     `define R_OR 3'b110
     `define R_AND 3'b111
+    // I-CSR
+    `define I_CSR 7'b1110011
+    `define I_CSRRC 3'b011
+    `define I_CSRRCI 3'b111
+    `define I_CSRRS 3'b010
+    `define I_CSRRSI 3'b110
+    `define I_CSRRW 3'b001
+    `define I_CSRRWI 3'b101
 
 `endif
 

@@ -40,9 +40,9 @@ module BranchDecision(
             `BEQ: br = (reg1 == reg2) ? 1 : 0;
             `BNE: br = (reg1 != reg2) ? 1 : 0;
             `BLTU: br = (reg1 < reg2) ? 1 : 0;
-            `BGEU: br = (reg1 > reg2) ? 1 : 0;
+            `BGEU: br = (reg1 >= reg2) ? 1 : 0;
             `BLT: br = (reg1_s < reg2_s) ? 1 : 0;
-            `BGE: br = (reg1_s > reg2_s) ? 1 : 0;
+            `BGE: br = (reg1_s >= reg2_s) ? 1 : 0;
             default: br = 0;
         endcase
     end
