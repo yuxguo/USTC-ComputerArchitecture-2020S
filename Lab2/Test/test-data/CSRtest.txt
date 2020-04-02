@@ -1,0 +1,45 @@
+
+CSRtest.om:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010054 <est_csr>:
+   10054:	00c00213          	li	tp,12
+   10058:	00021073          	csrw	ustatus,tp
+   1005c:	00f00293          	li	t0,15
+   10060:	00129073          	fsflags	t0
+   10064:	002c5073          	fsrmi	zero,24
+   10068:	01400313          	li	t1,20
+   1006c:	000333f3          	csrrc	t2,ustatus,t1
+   10070:	001c7573          	csrrci	a0,fflags,24
+   10074:	00000013          	nop
+   10078:	002265f3          	csrrsi	a1,frm,4
+   1007c:	00720463          	beq	tp,t2,10084 <next_1>
+   10080:	03c0006f          	j	100bc <failed>
+
+00010084 <next_1>:
+   10084:	00400413          	li	s0,4
+   10088:	000024f3          	csrr	s1,ustatus
+   1008c:	00940463          	beq	s0,s1,10094 <next_2>
+   10090:	02c0006f          	j	100bc <failed>
+
+00010094 <next_2>:
+   10094:	00800413          	li	s0,8
+   10098:	001024f3          	frflags	s1
+   1009c:	00940463          	beq	s0,s1,100a4 <next_3>
+   100a0:	01c0006f          	j	100bc <failed>
+
+000100a4 <next_3>:
+   100a4:	01c00413          	li	s0,28
+   100a8:	002024f3          	frrm	s1
+   100ac:	00940463          	beq	s0,s1,100b4 <success>
+   100b0:	00c0006f          	j	100bc <failed>
+
+000100b4 <success>:
+   100b4:	00100193          	li	gp,1
+   100b8:	ffdff06f          	j	100b4 <success>
+
+000100bc <failed>:
+   100bc:	00000193          	li	gp,0
+   100c0:	ffdff06f          	j	100bc <failed>

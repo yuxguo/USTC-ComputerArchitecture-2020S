@@ -45,7 +45,7 @@ module DataCache(
     wire [11:0] dealt_addr = addr[13:2];
     wire [11:0] dealt_debug_addr = debug_addr[13:2];
     // cache content
-    reg [31:0] data_cache[0:15];
+    reg [31:0] data_cache[0:4095];
 
     initial begin
         out_data = 32'h0;

@@ -31,7 +31,7 @@ module CSR_Regfile(
     input wire [31:0] CSR_data_write,
     output wire [31:0] CSR_data_read
     );
-    parameter CSR = 2**2;
+    parameter CSR = 2**12;
     parameter XLEN = 32;
     reg [XLEN-1:0] reg_file[CSR-1:0];
     integer i;
