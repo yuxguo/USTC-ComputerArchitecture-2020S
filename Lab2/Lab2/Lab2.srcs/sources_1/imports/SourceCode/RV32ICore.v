@@ -85,9 +85,9 @@ module RV32ICore(
     wire op1_src_EX, op2_src_EX;
     
     // CSR Instruction 
-    wire [31:0] CSR_data_read, CSR_data_EX, CSR_data_MEM, CSR_data_WB;
-    wire [11:0] CSR_addr, CSR_addr_EX, CSR_addr_MEM, CSR_addr_WB;
-    wire CSR_write_en, CSR_write_en_EX, CSR_write_en_MEM, CSR_write_en_WB;
+    wire [31:0] CSR_data_read, CSR_data_EX;
+    wire [11:0] CSR_addr, CSR_addr_EX;
+    wire CSR_write_en, CSR_write_en_EX;
     wire [31:0] CSR_zimm, CSR_zimm_EX;
     wire CSR_zimm_or_reg, CSR_zimm_or_reg_EX;
     
@@ -228,27 +228,14 @@ module RV32ICore(
     // ID stage
     // ---------------------------------------------
 
-        
-    CSR_Regfile CSR_Regfile(
-        .clk(CPU_CLK),
-        .rst(CPU_RST),
-        .CSR_write_en(CSR_write_en_WB),
-        .CSR_write_addr(CSR_addr_WB),
-        .CSR_read_addr(CSR_addr),
-        .CSR_data_write(CSR_data_WB),
-        .CSR_data_read(CSR_data_read)
-    );
-    
     CSR_EX CSR_EX1(
         .clk(CPU_CLK),
         .bubbleE(bubbleE),
         .flushE(flushE),
-        .CSR_data_ID(CSR_data_read),
         .CSR_addr_ID(CSR_addr),
         .CSR_zimm_ID(CSR_zimm),
         .CSR_zimm_or_reg_ID(CSR_zimm_or_reg),
         .CSR_write_en_ID(CSR_write_en),
-        .CSR_data_EX(CSR_data_EX),
         .CSR_addr_EX(CSR_addr_EX),
         .CSR_zimm_EX(CSR_zimm_EX),
         .CSR_zimm_or_reg_EX(CSR_zimm_or_reg_EX),
@@ -378,7 +365,16 @@ module RV32ICore(
     // ---------------------------------------------
     // EX stage
     // ---------------------------------------------
-
+    CSR_Regfile CSR_Regfile(
+        .clk(CPU_CLK),
+        .rst(CPU_RST),
+        .CSR_write_en(CSR_write_en_EX),
+        .CSR_write_addr(CSR_addr_EX),
+        .CSR_read_addr(CSR_addr_EX),
+        .CSR_data_write(ALU_out),
+        .CSR_data_read(CSR_data_EX)
+    );
+    
     ALU ALU1(
         .op1(ALU_op1),
         .op2(ALU_op2),
@@ -394,17 +390,7 @@ module RV32ICore(
     );
     
     
-    CSR_MEM CSR_MEM1(
-        .clk(CPU_CLK),
-        .bubbleM(bubbleM),
-        .flushM(flushM),
-        .CSR_data_EX(ALU_out),
-        .CSR_addr_EX(CSR_addr_EX),
-        .CSR_write_en_EX(CSR_write_en_EX),
-        .CSR_data_MEM(CSR_data_MEM),
-        .CSR_addr_MEM(CSR_addr_MEM),
-        .CSR_write_en_MEM(CSR_write_en_MEM)
-    );    
+
     
 
     Result_MEM Result_MEM1(
@@ -487,17 +473,7 @@ module RV32ICore(
         .reg_write_en_WB(reg_write_en_WB)
     );
 
-    CSR_WB CSR_WB1(
-        .clk(CPU_CLK),
-        .bubbleW(bubbleW),
-        .flushW(flushW),
-        .CSR_data_MEM(CSR_data_MEM),
-        .CSR_addr_MEM(CSR_addr_MEM),
-        .CSR_write_en_MEM(CSR_write_en_MEM),
-        .CSR_data_WB(CSR_data_WB),
-        .CSR_addr_WB(CSR_addr_WB),
-        .CSR_write_en_WB(CSR_write_en_WB)
-    );
+
 
 
     // ---------------------------------------------

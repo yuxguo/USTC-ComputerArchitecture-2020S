@@ -47,7 +47,7 @@ module CSR_Regfile(
     // if write register in clk posedge,
     // new wb data also write in clk posedge,
     // so old wb data will be written to register
-    always@(negedge clk or posedge rst) 
+    always@(posedge clk or posedge rst) 
     begin 
         if (rst)
             for (i = 1; i < CSR; i = i + 1) 
