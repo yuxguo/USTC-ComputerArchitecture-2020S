@@ -31,6 +31,7 @@
     `define LUI  4'd10
     `define OP1 4'd11
     `define OP2 4'd12
+    `define NAND 4'd13
 // br_type[2:0]
     `define NOBRANCH  3'd0
     `define BEQ  3'd1

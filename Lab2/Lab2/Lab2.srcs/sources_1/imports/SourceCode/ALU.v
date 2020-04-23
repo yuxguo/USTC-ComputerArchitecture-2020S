@@ -49,6 +49,7 @@ module ALU(
             `SLTU: ALU_out = (op1 < op2) ? 32'd1 : 32'd0;
             `LUI: ALU_out = op2;
             `OP1: ALU_out = op1;
+            `NAND: ALU_out = ~op1 & op2;
             default: ALU_out = 32'b0;
         endcase
     end

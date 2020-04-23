@@ -412,12 +412,12 @@ module ControllerDecoder(
             
             if (funct3 == `I_CSRRC)
             begin
-                 ALU_func = `AND;
+                 ALU_func = `NAND;
                  CSR_zimm_or_reg = 0;
             end
             else if (funct3 == `I_CSRRCI)
             begin
-                 ALU_func = `AND;
+                 ALU_func = `NAND;
                  CSR_zimm_or_reg = 1;
             end
             else if (funct3 == `I_CSRRS)
