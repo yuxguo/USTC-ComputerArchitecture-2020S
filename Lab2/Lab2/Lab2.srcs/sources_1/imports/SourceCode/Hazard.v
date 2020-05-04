@@ -24,9 +24,9 @@
     // br                是否branch
     // jalr              是否jalr
     // jal               是否jal
-    // wb_select         ����EX�ε�WBselect���ж�exָ���Ƿ�Ϊloadָ��
-    // reg_write_en_MEM  MEM阶段的寄存器写使能信�?
-    // reg_write_en_WB   WB阶段的寄存器写使能信�?
+    // wb_select         ����EX�ε�WBselect���ж�exָ���Ƿ�Ϊloadָ��
+    // reg_write_en_MEM  MEM阶段的寄存器写使能信�?
+    // reg_write_en_WB   WB阶段的寄存器写使能信�?
 // 输出
     // flushF            IF阶段的flush信号
     // bubbleF           IF阶段的bubble信号
@@ -115,7 +115,7 @@ module HarzardUnit(
                 bubbleD = 1;
                 flushD = 0;
                 bubbleE = 0;
-                flushE = 0;
+                flushE = 1;
             end
             // implement branch predict with default no branch
             else if (br == 1)

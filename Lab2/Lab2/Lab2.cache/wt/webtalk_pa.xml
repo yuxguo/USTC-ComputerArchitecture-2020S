@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Apr 23 22:11:05 2020">
+<application name="pa" timeStamp="Mon May  4 20:33:11 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="e1a817b26e83485986a84126bc8ef01a" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -26,7 +26,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="RunSynthesis" value="2" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="6" type="JavaHandler"/>
 <property name="ShowView" value="2" type="JavaHandler"/>
-<property name="SimulationRun" value="52" type="JavaHandler"/>
+<property name="SimulationRun" value="53" type="JavaHandler"/>
 <property name="TclFind" value="1" type="JavaHandler"/>
 <property name="ToolsSettings" value="7" type="JavaHandler"/>
 <property name="ViewTaskRTLAnalysis" value="7" type="JavaHandler"/>
@@ -47,9 +47,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="FPGAChooser_SPEED" value="1" type="GuiHandlerData"/>
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="435" type="GuiHandlerData"/>
 <property name="FileSetPanel_MESSAGES" value="4" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="81" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="82" type="GuiHandlerData"/>
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
-<property name="GraphicalView_ZOOM_FIT" value="32" type="GuiHandlerData"/>
+<property name="GraphicalView_ZOOM_FIT" value="33" type="GuiHandlerData"/>
 <property name="HCodeEditor_CLOSE" value="1" type="GuiHandlerData"/>
 <property name="HCodeEditor_SEARCH_TEXT_COMBO_BOX" value="11" type="GuiHandlerData"/>
 <property name="HFolderChooserHelpers_JUMP_TO_CURRENT_WORKING_DIRECTORY" value="1" type="GuiHandlerData"/>
@@ -67,7 +67,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="MsgTreePanel_MESSAGE_VIEW_TREE" value="11" type="GuiHandlerData"/>
 <property name="PACommandNames_ADD_SOURCES" value="10" type="GuiHandlerData"/>
 <property name="PACommandNames_AUTO_UPDATE_HIER" value="2" type="GuiHandlerData"/>
-<property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="53" type="GuiHandlerData"/>
+<property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="54" type="GuiHandlerData"/>
 <property name="PAViews_CODE" value="78" type="GuiHandlerData"/>
 <property name="PAViews_PROJECT_SUMMARY" value="1" type="GuiHandlerData"/>
 <property name="PAViews_SCHEMATIC" value="10" type="GuiHandlerData"/>
@@ -77,7 +77,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ProjectTab_RELOAD" value="11" type="GuiHandlerData"/>
 <property name="RDICommands_DELETE" value="4" type="GuiHandlerData"/>
 <property name="RDICommands_SETTINGS" value="7" type="GuiHandlerData"/>
-<property name="RDIViews_WAVEFORM_VIEWER" value="274" type="GuiHandlerData"/>
+<property name="RDIViews_WAVEFORM_VIEWER" value="279" type="GuiHandlerData"/>
 <property name="RemoveSourcesDialog_ALSO_DELETE" value="4" type="GuiHandlerData"/>
 <property name="SaveProjectUtils_SAVE" value="2" type="GuiHandlerData"/>
 <property name="SettingsDialog_PROJECT_TREE" value="3" type="GuiHandlerData"/>
@@ -96,9 +96,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformView_GOTO_TIME_0" value="1" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="123" type="GuiMode"/>
+<property name="GuiMode" value="131" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="112" type="TclMode"/>
+<property name="TclMode" value="118" type="TclMode"/>
 </item>
 </section>
 </application>
