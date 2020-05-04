@@ -1,0 +1,45 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/ALU.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/IdExSegReg/AddrEx.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/ExMemSegReg/AddrMem.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/MemWbSegReg/AddrWb.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/IdExSegReg/BrTarget.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/BranchDecision.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/new/CSR_EX.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/new/CSR_Regfile.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/ControllerDecoder.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/IdExSegReg/CtrlEx.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/ExMemSegReg/CtrlMem.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/MemWbSegReg/CtrlWb.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/DataExtend.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/GeneralRegister.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/Hazard.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/IfIdSegReg/IR.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/new/Imm.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/ImmExtend.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/Cache/InstructionCache.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/NPCGenerator.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/IdExSegReg/Op1.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/PC.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/IdExSegReg/PcEx.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/IfIdSegReg/PcId.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/RV32ICore.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/IdExSegReg/Reg2Ex.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/ExMemSegReg/Reg2Mem.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/ExMemSegReg/Result.v" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/SourceCode/MemWbSegReg/WbData.v" \
+
+sv xil_defaultlib  \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/CacheSrcCode/cache.sv" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/CacheSrcCode/main_mem.sv" \
+"../../../../Lab3-with-CPU.srcs/sources_1/imports/CacheSrcCode/mem.sv" \
+
+verilog xil_defaultlib  \
+"../../../../Lab3-with-CPU.srcs/sim_1/imports/Lab3/cpu_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,9 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sim_1/imports/CacheSrcCode/cache_tb.sv,1588575250,systemVerilog,,,,cache_tb,,,,,,,,
+D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv,1588610970,systemVerilog,,D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/main_mem.sv,,cache,,,,,,,,
+D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/main_mem.sv,1587564004,systemVerilog,,D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/mem.sv,,main_mem,,,,,,,,
+D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/mem.sv,1587564004,systemVerilog,,D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sim_1/imports/CacheSrcCode/cache_tb.sv,,mem,,,,,,,,
