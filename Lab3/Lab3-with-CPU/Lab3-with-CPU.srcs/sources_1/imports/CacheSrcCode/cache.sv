@@ -57,7 +57,7 @@ reg cache_hit = 1'b0;
 reg [31:0]way_idx;
 reg [31:0]selected_idx;
 reg [31:0]history[SET_SIZE][WAY_CNT]; // 每个line的历史信息，对于FIFO是其被换入的时间，对于LRU是其上一次被引用到现在的时间
-localparam LRU = 1'b1;
+localparam LRU = 1'b0;
 
 
 
