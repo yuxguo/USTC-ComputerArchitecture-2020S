@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon May  4 14:43:08 2020
-# Process ID: 16352
+# Start of session at: Thu May 21 19:57:57 2020
+# Process ID: 15400
 # Current directory: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.runs/synth_1
 # Command line: vivado.exe -log cache.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cache.tcl
 # Log file: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.runs/synth_1/cache.vds
@@ -15,30 +15,30 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15632 
+INFO: Helper process launched with PID 13296 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 334.172 ; gain = 100.012
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 333.719 ; gain = 100.133
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'cache' [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:3]
 	Parameter LINE_ADDR_LEN bound to: 3 - type: integer 
-	Parameter SET_ADDR_LEN bound to: 3 - type: integer 
+	Parameter SET_ADDR_LEN bound to: 2 - type: integer 
 	Parameter TAG_ADDR_LEN bound to: 6 - type: integer 
-	Parameter WAY_CNT bound to: 4 - type: integer 
-	Parameter MEM_ADDR_LEN bound to: 9 - type: integer 
-	Parameter UNUSED_ADDR_LEN bound to: 18 - type: integer 
+	Parameter WAY_CNT bound to: 2 - type: integer 
+	Parameter MEM_ADDR_LEN bound to: 8 - type: integer 
+	Parameter UNUSED_ADDR_LEN bound to: 19 - type: integer 
 	Parameter LINE_SIZE bound to: 8 - type: integer 
-	Parameter SET_SIZE bound to: 8 - type: integer 
+	Parameter SET_SIZE bound to: 4 - type: integer 
 	Parameter LRU bound to: 1'b0 
-INFO: [Synth 8-155] case statement is not full and has no default [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:191]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:227]
 INFO: [Synth 8-6157] synthesizing module 'main_mem' [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/main_mem.sv:2]
 	Parameter LINE_ADDR_LEN bound to: 3 - type: integer 
-	Parameter ADDR_LEN bound to: 9 - type: integer 
+	Parameter ADDR_LEN bound to: 8 - type: integer 
 	Parameter RD_CYCLE bound to: 50 - type: integer 
 	Parameter WR_CYCLE bound to: 50 - type: integer 
 	Parameter LINE_SIZE bound to: 8 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'mem' [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/mem.sv:2]
-	Parameter ADDR_LEN bound to: 12 - type: integer 
-	Parameter MEM_SIZE bound to: 4096 - type: integer 
+	Parameter ADDR_LEN bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2048 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'mem' (1#1) [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/mem.sv:2]
 WARNING: [Synth 8-5788] Register rd_delay_reg in module main_mem is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/main_mem.sv:36]
 WARNING: [Synth 8-5788] Register wr_delay_reg in module main_mem is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/main_mem.sv:37]
@@ -59,90 +59,88 @@ WARNING: [Synth 8-5788] Register rd_line_latch_reg[5] in module main_mem is has 
 WARNING: [Synth 8-5788] Register rd_line_latch_reg[6] in module main_mem is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/main_mem.sv:87]
 WARNING: [Synth 8-5788] Register rd_line_latch_reg[7] in module main_mem is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/main_mem.sv:87]
 INFO: [Synth 8-6155] done synthesizing module 'main_mem' (2#1) [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/main_mem.sv:2]
-WARNING: [Synth 8-6014] Unused sequential element ref_signal_reg was removed.  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:71]
-WARNING: [Synth 8-6014] Unused sequential element rec_signal_reg was removed.  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:72]
-WARNING: [Synth 8-5788] Register dirty_reg[0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[0][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[0][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[1][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[1][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[2][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[2][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[2][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[2][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[3][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[3][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[3][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[3][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[4][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[4][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[4][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[4][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[5][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[5][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[5][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[5][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[6][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[6][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[6][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[6][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[7][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[7][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[7][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register dirty_reg[7][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:181]
-WARNING: [Synth 8-5788] Register valid_reg[0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[0][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[0][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[1][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[1][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[2][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[2][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[2][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[2][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[3][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[3][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[3][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[3][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[4][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[4][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[4][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[4][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[5][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[5][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[5][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[5][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[6][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[6][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[6][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[6][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[7][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[7][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[7][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register valid_reg[7][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:182]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][2][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
-WARNING: [Synth 8-5788] Register cache_mem_reg[0][2][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:195]
+WARNING: [Synth 8-5788] Register dirty_reg[0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:217]
+WARNING: [Synth 8-5788] Register dirty_reg[0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:217]
+WARNING: [Synth 8-5788] Register dirty_reg[1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:217]
+WARNING: [Synth 8-5788] Register dirty_reg[1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:217]
+WARNING: [Synth 8-5788] Register dirty_reg[2][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:217]
+WARNING: [Synth 8-5788] Register dirty_reg[2][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:217]
+WARNING: [Synth 8-5788] Register dirty_reg[3][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:217]
+WARNING: [Synth 8-5788] Register dirty_reg[3][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:217]
+WARNING: [Synth 8-5788] Register valid_reg[0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:218]
+WARNING: [Synth 8-5788] Register valid_reg[0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:218]
+WARNING: [Synth 8-5788] Register valid_reg[1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:218]
+WARNING: [Synth 8-5788] Register valid_reg[1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:218]
+WARNING: [Synth 8-5788] Register valid_reg[2][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:218]
+WARNING: [Synth 8-5788] Register valid_reg[2][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:218]
+WARNING: [Synth 8-5788] Register valid_reg[3][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:218]
+WARNING: [Synth 8-5788] Register valid_reg[3][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:218]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][0][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[0][1][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][0][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][0][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][0][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][0][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][0][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][0][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][1][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][1][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][1][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][1][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][1][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[1][1][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][0][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][0][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][0][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][0][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][0][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][0][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][1][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][1][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][1][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][1][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][1][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[2][1][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][0][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][0][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][0][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][0][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][0][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][0][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][1][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][1][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][1][2] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][1][3] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][1][4] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][1][5] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][1][6] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_mem_reg[3][1][7] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:231]
+WARNING: [Synth 8-5788] Register cache_tags_reg[0][0] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:240]
+WARNING: [Synth 8-5788] Register cache_tags_reg[0][1] in module cache is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:240]
 INFO: [Common 17-14] Message 'Synth 8-5788' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'cache' (3#1) [D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.srcs/sources_1/imports/CacheSrcCode/cache.sv:3]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[31]
@@ -163,22 +161,23 @@ WARNING: [Synth 8-3331] design cache has unconnected port addr[17]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[16]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[15]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[14]
+WARNING: [Synth 8-3331] design cache has unconnected port addr[13]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[1]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 505.305 ; gain = 271.145
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 410.348 ; gain = 176.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 505.305 ; gain = 271.145
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 410.348 ; gain = 176.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 505.305 ; gain = 271.145
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 410.348 ; gain = 176.762
 ---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-5544] ROM "rd_line_latch_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rd_line_latch_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rd_line_latch_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -194,12 +193,6 @@ INFO: [Synth 8-5545] ROM "dirty_reg[0][0]" won't be mapped to RAM because addres
 INFO: [Synth 8-5545] ROM "dirty_reg[0][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "dirty_reg[0][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "dirty_reg[0][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "dirty_reg[0][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "dirty_reg[0][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "dirty_reg[0][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "dirty_reg[0][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "dirty_reg[0][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "dirty_reg[0][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "cache_mem_reg[0][0][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cache_mem_reg[0][0][1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cache_mem_reg[0][0][2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -209,102 +202,11 @@ INFO: [Synth 8-5544] ROM "cache_mem_reg[0][0][5]" won't be mapped to Block RAM b
 INFO: [Synth 8-5544] ROM "cache_mem_reg[0][0][6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cache_mem_reg[0][0][7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[0][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[0][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "history_reg[0][0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "history_reg[0][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "history_reg[0][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[0][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[0][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[0][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[0][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[0][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[1][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[1][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "history_reg[1][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "history_reg[1][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[1][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[1][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[1][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[1][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[1][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[2][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[2][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "history_reg[2][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "history_reg[2][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[2][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[2][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[2][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[2][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[2][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[3][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[3][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "history_reg[3][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "history_reg[3][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[3][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[3][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[3][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[3][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[3][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[4][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[4][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "history_reg[4][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "history_reg[4][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[4][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[4][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[4][2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[4][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[4][3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[5][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[5][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "history_reg[5][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "history_reg[5][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history_reg[5][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5544] ROM "history_reg[6][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "history_reg[7][0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "history_reg[1][0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "history_reg[2][0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "history_reg[3][0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cache_stat" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -316,7 +218,7 @@ INFO: [Synth 8-5544] ROM "cache_stat" won't be mapped to Block RAM because addre
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cache_stat_reg' using encoding 'one-hot' in module 'cache'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 581.188 ; gain = 347.027
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 439.668 ; gain = 206.082
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -330,27 +232,28 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 4     
 	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 317   
-	               12 Bit    Registers := 1     
-	                9 Bit    Registers := 2     
-	                6 Bit    Registers := 33    
-	                1 Bit    Registers := 65    
+	               32 Bit    Registers := 101   
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 9     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 19    
 +---RAMs : 
-	             128K Bit         RAMs := 1     
+	              64K Bit         RAMs := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 95    
-	   4 Input     32 Bit        Muxes := 21    
-	   2 Input     12 Bit        Muxes := 6     
-	   2 Input      9 Bit        Muxes := 2     
-	   4 Input      6 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 19    
+	   4 Input     32 Bit        Muxes := 26    
+	   2 Input     11 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 918   
-	   4 Input      1 Bit        Muxes := 422   
+	   2 Input      1 Bit        Muxes := 181   
+	   4 Input      1 Bit        Muxes := 112   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -361,28 +264,29 @@ Hierarchical RTL Component report
 Module cache 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 297   
-	                9 Bit    Registers := 1     
-	                6 Bit    Registers := 33    
-	                1 Bit    Registers := 64    
+	               32 Bit    Registers := 81    
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 9     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 18    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 88    
-	   4 Input     32 Bit        Muxes := 21    
-	   2 Input      9 Bit        Muxes := 2     
-	   4 Input      6 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 12    
+	   4 Input     32 Bit        Muxes := 26    
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 908   
-	   4 Input      1 Bit        Muxes := 422   
+	   2 Input      1 Bit        Muxes := 171   
+	   4 Input      1 Bit        Muxes := 112   
 Module mem 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
 +---RAMs : 
-	             128K Bit         RAMs := 1     
+	              64K Bit         RAMs := 1     
 Module main_mem 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -390,12 +294,12 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 19    
-	               12 Bit    Registers := 1     
-	                9 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 7     
-	   2 Input     12 Bit        Muxes := 6     
+	   2 Input     11 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 10    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -414,6 +318,12 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "history" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dirty_reg[0][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dirty_reg[0][0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dirty_reg[0][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dirty_reg[0][1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design cache has unconnected port addr[31]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[30]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[29]
@@ -432,10 +342,11 @@ WARNING: [Synth 8-3331] design cache has unconnected port addr[17]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[16]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[15]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[14]
+WARNING: [Synth 8-3331] design cache has unconnected port addr[13]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[1]
 WARNING: [Synth 8-3331] design cache has unconnected port addr[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:20 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -445,7 +356,7 @@ Block RAM: Preliminary Mapping  Report (see note below)
 +------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name | RTL Object   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|mem:        | ram_cell_reg | 4 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 4      | 
+|mem:        | ram_cell_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
 +------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -454,8 +365,6 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4480] The timing for the instance main_mem_instance/i_0/mem_inst/ram_cell_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance main_mem_instance/i_0/mem_inst/ram_cell_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance main_mem_instance/i_0/mem_inst/ram_cell_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance main_mem_instance/i_0/mem_inst/ram_cell_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -467,7 +376,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:24 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -477,7 +386,7 @@ Block RAM: Final Mapping  Report
 +------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name | RTL Object   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|mem:        | ram_cell_reg | 4 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 4      | 
+|mem:        | ram_cell_reg | 2 K x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 2      | 
 +------------+--------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -492,113 +401,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][31]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][30]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][29]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][28]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][27]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][26]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][25]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][24]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][23]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][22]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][21]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][20]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][19]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][18]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][17]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][16]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][15]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][14]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][13]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][12]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][11]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][10]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][9]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][8]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][7]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][6]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][5]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][4]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][3]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][2]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[0][3][1]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][31]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][30]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][29]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][28]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][27]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][26]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][25]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][24]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][23]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][22]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][21]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][20]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][19]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][18]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][17]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][16]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][15]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][14]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][13]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][12]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][11]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][10]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][9]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][8]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][7]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][6]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][5]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][4]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][3]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][2]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[1][3][1]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][31]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][30]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][29]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][28]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][27]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][26]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][25]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][24]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][23]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][22]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][21]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][20]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][19]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][18]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][17]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][16]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][15]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][14]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][13]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][12]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][11]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][10]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][9]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][8]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][7]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][6]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][5]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][4]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][3]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][2]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[2][3][1]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[3][3][31]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[3][3][30]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[3][3][29]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[3][3][28]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[3][3][27]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[3][3][26]) is unused and will be removed from module cache.
-WARNING: [Synth 8-3332] Sequential element (history_reg[3][3][25]) is unused and will be removed from module cache.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-4480] The timing for the instance main_mem_instance/mem_inst/ram_cell_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-4480] The timing for the instance main_mem_instance/mem_inst/ram_cell_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance main_mem_instance/mem_inst/ram_cell_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
-INFO: [Synth 8-4480] The timing for the instance main_mem_instance/mem_inst/ram_cell_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:31 ; elapsed = 00:01:31 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -622,7 +428,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:33 ; elapsed = 00:01:33 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -635,7 +441,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:33 ; elapsed = 00:01:33 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -647,25 +453,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:33 ; elapsed = 00:01:33 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:33 ; elapsed = 00:01:33 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:34 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:34 ; elapsed = 00:01:34 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -682,20 +488,20 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     1|
-|2     |CARRY4   |    41|
-|3     |LUT1     |     3|
-|4     |LUT2     |    30|
-|5     |LUT3     |    61|
-|6     |LUT4     |   211|
-|7     |LUT5     |   601|
-|8     |LUT6     |  3636|
-|9     |MUXF7    |   958|
+|2     |CARRY4   |    40|
+|3     |LUT1     |    52|
+|4     |LUT2     |    96|
+|5     |LUT3     |   267|
+|6     |LUT4     |   699|
+|7     |LUT5     |   673|
+|8     |LUT6     |   567|
+|9     |MUXF7    |    64|
 |10    |MUXF8    |    32|
-|11    |RAMB36E1 |     4|
-|12    |FDCE     |  1204|
+|11    |RAMB36E1 |     2|
+|12    |FDCE     |   634|
 |13    |FDPE     |     1|
-|14    |FDRE     |  8960|
-|15    |IBUF     |    48|
+|14    |FDRE     |  2672|
+|15    |IBUF     |    47|
 |16    |OBUF     |    33|
 +------+---------+------+
 
@@ -703,18 +509,18 @@ Report Instance Areas:
 +------+--------------------+---------+------+
 |      |Instance            |Module   |Cells |
 +------+--------------------+---------+------+
-|1     |top                 |         | 15824|
-|2     |  main_mem_instance |main_mem |  1081|
-|3     |    mem_inst        |mem      |     4|
+|1     |top                 |         |  5880|
+|2     |  main_mem_instance |main_mem |  1074|
+|3     |    mem_inst        |mem      |     2|
 +------+--------------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:34 . Memory (MB): peak = 809.563 ; gain = 575.402
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 623.145 ; gain = 389.559
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 660 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:34 ; elapsed = 00:01:34 . Memory (MB): peak = 809.563 ; gain = 575.402
-Synthesis Optimization Complete : Time (s): cpu = 00:01:34 ; elapsed = 00:01:34 . Memory (MB): peak = 809.563 ; gain = 575.402
+Synthesis finished with 0 errors, 0 critical warnings and 148 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 623.145 ; gain = 389.559
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 623.145 ; gain = 389.559
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1083 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 185 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'cache' is not ideal for floorplanning, since the cellview 'cache' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -723,11 +529,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-154 Infos, 243 Warnings, 0 Critical Warnings and 0 Errors encountered.
+58 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:42 ; elapsed = 00:01:43 . Memory (MB): peak = 809.563 ; gain = 588.355
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 669.293 ; gain = 448.477
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab3/Lab3/Lab3.runs/synth_1/cache.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file cache_utilization_synth.rpt -pb cache_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.225 . Memory (MB): peak = 809.563 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon May  4 14:44:57 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 669.293 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 21 19:58:38 2020...

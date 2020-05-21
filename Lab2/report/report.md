@@ -23,11 +23,11 @@
 
 在给出的代码框架中，数据的转发与 ALU 操作数来源的原则混在了一起，使得 `Control Unit` 和 `Harzard Unit` 功能分的不是很清楚，如下图红圈中所示：
 
-<img src="assets/image-20200508211758092.png" alt="image-20200508211758092" style="zoom:50%;" />
+<img src="assets/image-20200508211758092.png" alt="image-20200508211758092" style="zoom:100%;" />
 
 在我设计的CPU中，我对这些部分做了修改，如图：
 
-<img src="assets/image-20200508212232179.png" alt="image-20200508212232179" style="zoom:50%;" />
+<img src="assets/image-20200508212232179.png" alt="image-20200508212232179" style="zoom:100%;" />
 
 其中，蓝色圈部分是由 `Harzard Unit` 负责，而红圈是由 `Control Unit` 负责，这样，原有的数据通路中从上往下数第三个红圈内的数据选择器可以省略。
 

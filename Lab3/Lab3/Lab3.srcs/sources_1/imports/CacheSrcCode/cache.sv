@@ -1,9 +1,7 @@
-
-
 module cache #(
     parameter  LINE_ADDR_LEN = 3, // line内地址长度，决定了每个line具有2^3个word, 类似于每个Block有8个字，line=block
     parameter  SET_ADDR_LEN  = 3, // 组地址长度，决定了一共有2^3=8组
-    parameter  TAG_ADDR_LEN  = 6, // tag长度
+    parameter  TAG_ADDR_LEN  = 5, // tag长度
     parameter  WAY_CNT       = 2  // 组相连度，决定了每组中有多少路line，这里是直接映射型cache，因此该参数没用到
 )(
     input  clk, rst,
@@ -12,7 +10,8 @@ module cache #(
     input  rd_req,             // 读请求信号
     output reg [31:0] rd_data, // 读出的数据，一次读一个word
     input  wr_req,             // 写请求信号
-    input  [31:0] wr_data      // 要写入的数据，一次写一个word
+    input  [31:0] wr_data,      // 要写入的数据，一次写一个word
+    output reg ref_signal
 );
 // 主存按照line组织，所以line内部的地址不算
 localparam MEM_ADDR_LEN    = TAG_ADDR_LEN + SET_ADDR_LEN ; // 计算主存地址长度 MEM_ADDR_LEN，主存大小=2^MEM_ADDR_LEN个line
@@ -56,14 +55,15 @@ reg cache_hit = 1'b0;
 reg [31:0]way_idx;
 reg [31:0]selected_idx;
 reg [31:0]history[SET_SIZE][WAY_CNT]; // 每个line的历史信息，对于FIFO是其被换入的时间，对于LRU是其上一次被引用到现在的时间
-localparam LRU = 1'b0;
+localparam LRU = 1'b1;
 
 
 
 
 // 对输入的每个rd或wr，都只会生成一个周期的高电平信号ref_signal
 // 因为rd和wr信号不止持续一个周期，经过这个状态机后的ref_signal只会有一个周期有效，可以避免在一次读写中多次改变历史信息记录
-reg ref_signal, rec_signal;
+reg rec_signal;
+reg [31:0]mem_way_idx;
 always @ (posedge clk or posedge rst) 
 begin
     if (rst)
@@ -109,7 +109,7 @@ begin
     end else begin
         if (LRU == 1'b1) 
         begin // 若使用 LRU 策略
-            if (ref_signal) 
+            if (ref_signal && miss == 1'b0) 
             begin 
                 // 当cache 收到读或者写信号时，更新 history[set_addr] 中的WAY_CNT个历史信息值，否则不更新值（因为相对大小关系是不变的）
                 // 可以理解为 history[set_addr] 中的各个值记录的是 该set被引用到时，每个line上次被引用距现在的次数
@@ -127,6 +127,20 @@ begin
                     end
                 end
             end
+            else if (cache_stat == SWAP_IN_OK)
+            begin
+                for(integer i = 0; i < WAY_CNT; ++i) 
+                begin
+                    if (i == mem_way_idx) 
+                    begin
+                        history[set_addr][i] <= 32'b0;
+                    end 
+                    else 
+                    begin
+                        history[set_addr][i] <= history[set_addr][i] + 1;
+                    end
+                end
+            end
         end 
         else 
         begin // 否则使用FIFO
@@ -135,7 +149,7 @@ begin
                 // 仅当换入成功的时候更新值
                 for(integer i = 0; i < WAY_CNT; ++i) 
                 begin
-                    if (i == way_idx) 
+                    if (i == mem_way_idx) 
                     begin
                         history[set_addr][i] <= 32'b0;
                     end 
@@ -207,6 +221,7 @@ always @ (posedge clk or posedge rst) begin     // ?? cache ???
                                     cache_stat  <= SWAP_IN;
                                 end
                                 {mem_rd_tag_addr, mem_rd_set_addr} <= {tag_addr, set_addr};
+                                mem_way_idx <= way_idx;
                             end
                         end
                     end
@@ -222,9 +237,9 @@ always @ (posedge clk or posedge rst) begin     // ?? cache ???
                     end
         SWAP_IN_OK: begin           // 上一个周期换入成功，这周期将主存读出的line写入cache，并更新tag，置高valid，置低dirty
                         for(integer i=0; i<LINE_SIZE; i++)  cache_mem[mem_rd_set_addr][way_idx][i] <= mem_rd_line[i];
-                        cache_tags[mem_rd_set_addr][way_idx] <= mem_rd_tag_addr;
-                        valid     [mem_rd_set_addr][way_idx] <= 1'b1;
-                        dirty     [mem_rd_set_addr][way_idx] <= 1'b0;
+                        cache_tags[mem_rd_set_addr][mem_way_idx] <= mem_rd_tag_addr;
+                        valid     [mem_rd_set_addr][mem_way_idx] <= 1'b1;
+                        dirty     [mem_rd_set_addr][mem_way_idx] <= 1'b0;
                         cache_stat <= IDLE;        // 回到就绪状态
                     end
         endcase

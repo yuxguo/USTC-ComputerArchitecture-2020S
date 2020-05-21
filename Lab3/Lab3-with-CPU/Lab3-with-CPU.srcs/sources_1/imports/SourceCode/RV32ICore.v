@@ -23,7 +23,7 @@ module RV32ICore(
     input wire [ 3:0] CPU_Debug_InstCache_WE2,
     output wire [31:0] CPU_Debug_InstCache_RD2,
     // debug signals
-    /*output wire [31:0] debug_PC_IF, 
+    output wire [31:0] debug_PC_IF, 
     output wire [31:0] debug_jal_target, debug_jalr_target,
     output wire [31:0] debug_PC_ID, debug_inst_ID,
     output wire [31:0] debug_PC_EX, debug_br_target, debug_reg1_EX, debug_reg2_EX, debug_imm_EX,
@@ -48,7 +48,7 @@ module RV32ICore(
     output wire [3:0] debug_cache_write_en_MEM,
     output wire [31:0] debug_data_WB,
     output wire [4:0] debug_reg_dest_WB,
-    output wire debug_reg_write_en_WB,*/
+    output wire debug_reg_write_en_WB,
     output wire debug_miss, debug_ref_signal
     );
     
@@ -101,7 +101,7 @@ module RV32ICore(
      wire ref_signal;
     
     // Yuxuan Guo debug wires
-    /* assign debug_PC_IF = PC_IF;
+    assign debug_PC_IF = PC_IF;
     assign debug_jal_target = jal_target;
     assign debug_jalr_target = ALU_out;
     assign debug_PC_ID = PC_ID;
@@ -128,7 +128,7 @@ module RV32ICore(
     assign debug_cache_write_en_MEM = cache_write_en_MEM;
     assign debug_data_WB = data_WB;
     assign debug_reg_dest_WB = reg_dest_WB;
-    assign debug_reg_write_en_WB = reg_write_en_WB;*/
+    assign debug_reg_write_en_WB = reg_write_en_WB;
     assign debug_miss = miss;
     assign debug_ref_signal = ref_signal;
        
