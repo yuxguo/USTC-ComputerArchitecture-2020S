@@ -49,7 +49,8 @@ module RV32ICore(
     output wire [31:0] debug_data_WB,
     output wire [4:0] debug_reg_dest_WB,
     output wire debug_reg_write_en_WB,
-    output wire debug_miss, debug_ref_signal
+    output wire debug_miss, debug_ref_signal,
+    output wire debug_BR_pred,debug_branch_prediction_miss, debug_BP_update
     );
     
 	//wire values definitions
@@ -102,6 +103,7 @@ module RV32ICore(
     wire BP_update,BP_BR;
     
     assign BP_update = (br_type_EX == `NOBRANCH) ? 1'b0 : 1'b1;
+    assign debug_BP_update = BP_update;
     assign BP_BR = br;
     
     wire miss;
@@ -138,7 +140,8 @@ module RV32ICore(
     assign debug_reg_write_en_WB = reg_write_en_WB;
     assign debug_miss = miss;
     assign debug_ref_signal = ref_signal;
-       
+    
+    assign debug_branch_prediction_miss = branch_prediction_miss;
    
 
     // Adder to compute PC + 4
@@ -195,7 +198,8 @@ module RV32ICore(
         .update(BP_update),
         .BR(BP_BR),
         .branch_prediction_miss(branch_prediction_miss),
-        .NPC(PC_pred)
+        .NPC(PC_pred),
+        .debug_BR_pred(debug_BR_pred)
     );
     
     

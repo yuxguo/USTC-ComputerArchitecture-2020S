@@ -4,7 +4,7 @@ module cpu_tb();
     reg clk = 1'b1;
     reg rst = 1'b1;
     
-    always  #2 clk = ~clk;
+    always  #1 clk = ~clk;
     initial #8 rst = 1'b0;
     
     wire [31:0] debug_PC_IF;
@@ -35,6 +35,7 @@ module cpu_tb();
         wire debug_reg_write_en_WB;
         wire debug_miss;
         wire debug_ref_signal;
+        wire debug_BR_pred, debug_branch_prediction_miss, debug_BP_update;
     
     RV32ICore RV32ICore_tb_inst(
         .CPU_CLK    ( clk          ),
@@ -76,16 +77,49 @@ module cpu_tb();
                 .debug_reg_dest_WB(debug_reg_dest_WB),
                 .debug_reg_write_en_WB(debug_reg_write_en_WB),
                 .debug_miss(debug_miss),
-                .debug_ref_signal(debug_ref_signal)
+                .debug_ref_signal(debug_ref_signal),
+                .debug_BR_pred(debug_BR_pred),
+                .debug_branch_prediction_miss(debug_branch_prediction_miss),
+                .debug_BP_update(debug_BP_update)
     );
     
-    reg [31:0]ref_count, miss_count;
+    reg [31:0]ref_count, miss_count, branch_pred_miss_cnt, BR_pred_cnt, Branch_cnt;
     initial 
     begin
         ref_count = 0;
         miss_count = 0;
+        branch_pred_miss_cnt = 0;
+        BR_pred_cnt = 0;
+        Branch_cnt = 0;
     end
-    always @ (posedge debug_miss)
+    
+    always @ (posedge clk)
+    begin
+        if (debug_BR_pred)
+        begin
+            BR_pred_cnt <= BR_pred_cnt + 1;
+        end
+    end
+    
+    always @ (posedge clk)
+    begin
+        if (debug_branch_prediction_miss)
+        begin
+            branch_pred_miss_cnt <= branch_pred_miss_cnt + 1;
+        end
+    end
+    
+    
+    always @ (posedge clk)
+    begin
+        if (debug_BP_update)
+        begin
+             Branch_cnt <= Branch_cnt +1;
+        end 
+       
+    end
+    
+    /*always @ (posedge debug_miss)
     begin
         miss_count <= miss_count+1;
     end
@@ -93,6 +127,6 @@ module cpu_tb();
     always @ (posedge debug_ref_signal)
     begin
         ref_count <= ref_count+1;
-    end
+    end*/
     
 endmodule

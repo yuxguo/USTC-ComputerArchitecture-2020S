@@ -29,7 +29,8 @@ module BranchPrediction # (
     input [31:0] PC_query, PC_update, PC_target,
     input update, BR,
     output reg branch_prediction_miss,
-    output reg [31:0] NPC
+    output reg [31:0] NPC,
+    output debug_BR_pred
     );
     
     localparam stage = 2;
@@ -50,6 +51,8 @@ module BranchPrediction # (
     assign Br_pred_in = (stage == 1) ? onlyBTB_br : (BTB_hit & BHT_br);
     assign PC_pred = (stage == 1) ? onlyBTB_PC_pred : BTB_PC_pred;
     // assign PC_pred = onlyBTB_br ? onlyBTB_PC_pred : PC_query;
+    
+    assign debug_BR_pred = Br_pred_in;
     
     always @ (*)
     begin
