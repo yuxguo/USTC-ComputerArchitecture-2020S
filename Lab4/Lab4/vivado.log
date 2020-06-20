@@ -1,0 +1,357 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 14 14:10:20 2020
+# Process ID: 8288
+# Current directory: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16672 D:\GitHub_local_repos\USTC-ComputerArchitecture-2020S\Lab4\Lab4\Lab4.xpr
+# Log file: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/vivado.log
+# Journal file: D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 756.957 ; gain = 50.328
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/AddrEx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ExMemSegReg/AddrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/MemWbSegReg/AddrWb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/new/BHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BHT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/new/BR_hisinfo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BR_hisinfo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/new/BTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/BrTarget.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BR_Target_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/BranchDecision.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchDecision
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/new/BranchPrediction.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchPrediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/CSR_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/CSR_Regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_Regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ControllerDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControllerDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/CtrlEx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctrl_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ExMemSegReg/CtrlMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctrl_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/MemWbSegReg/CtrlWb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctrl_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/DataExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/GeneralRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HarzardUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IfIdSegReg/IR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IR_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/Imm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ImmExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/Cache/InstructionCache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionCache
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/NPCGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC_Generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/Op1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Op1_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/PcEx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IfIdSegReg/PcId.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/RV32ICore.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RV32ICore
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/Reg2Ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg2_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ExMemSegReg/Reg2Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg2_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ExMemSegReg/Result.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Result_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/MemWbSegReg/WbData.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_Data_WB
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/cache.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/main_mem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module main_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/mem.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 779.871 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1cd8f68d0ddf427baab3a252ff198793 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/cache.sv" Line 1. Module cache_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/main_mem.sv" Line 2. Module main_mem_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/mem.sv" Line 2. Module mem_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.BR_hisinfo
+Compiling module xil_defaultlib.BTB_default
+Compiling module xil_defaultlib.BHT_default
+Compiling module xil_defaultlib.BranchPrediction
+Compiling module xil_defaultlib.NPC_Generator
+Compiling module xil_defaultlib.PC_IF
+Compiling module xil_defaultlib.PC_ID
+Compiling module xil_defaultlib.InstructionCache
+Compiling module xil_defaultlib.IR_ID
+Compiling module xil_defaultlib.CSR_EX
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.ControllerDecoder
+Compiling module xil_defaultlib.ImmExtend
+Compiling module xil_defaultlib.PC_EX
+Compiling module xil_defaultlib.BR_Target_EX
+Compiling module xil_defaultlib.Op1_EX
+Compiling module xil_defaultlib.Imm_EX
+Compiling module xil_defaultlib.Reg2_EX
+Compiling module xil_defaultlib.Addr_EX
+Compiling module xil_defaultlib.Ctrl_EX
+Compiling module xil_defaultlib.CSR_Regfile
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.BranchDecision
+Compiling module xil_defaultlib.Result_MEM
+Compiling module xil_defaultlib.Reg2_MEM
+Compiling module xil_defaultlib.Addr_MEM
+Compiling module xil_defaultlib.Ctrl_MEM
+Compiling module xil_defaultlib.mem_default
+Compiling module xil_defaultlib.main_mem_default
+Compiling module xil_defaultlib.cache_default
+Compiling module xil_defaultlib.DataExtend
+Compiling module xil_defaultlib.WB_Data_WB
+Compiling module xil_defaultlib.Addr_WB
+Compiling module xil_defaultlib.Ctrl_WB
+Compiling module xil_defaultlib.HarzardUnit
+Compiling module xil_defaultlib.RV32ICore
+Compiling module xil_defaultlib.cpu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim/xsim.dir/cpu_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Jun 14 14:14:21 2020...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 779.871 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000us
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 790.250 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 790.250 ; gain = 10.379
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 790.250 ; gain = 10.379
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 803.984 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/AddrEx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ExMemSegReg/AddrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/MemWbSegReg/AddrWb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addr_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/new/BHT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BHT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/new/BR_hisinfo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BR_hisinfo
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/new/BTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BTB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/BrTarget.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BR_Target_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/BranchDecision.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchDecision
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/new/BranchPrediction.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchPrediction
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/CSR_EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/CSR_Regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR_Regfile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ControllerDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControllerDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/CtrlEx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctrl_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ExMemSegReg/CtrlMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctrl_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/MemWbSegReg/CtrlWb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ctrl_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/DataExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/GeneralRegister.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegisterFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/Hazard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HarzardUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IfIdSegReg/IR.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IR_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/Imm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Imm_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ImmExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ImmExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/Cache/InstructionCache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionCache
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/NPCGenerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC_Generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/Op1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Op1_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/PcEx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IfIdSegReg/PcId.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC_ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/RV32ICore.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RV32ICore
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/IdExSegReg/Reg2Ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg2_EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ExMemSegReg/Reg2Mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Reg2_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/ExMemSegReg/Result.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Result_MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/MemWbSegReg/WbData.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WB_Data_WB
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 1cd8f68d0ddf427baab3a252ff198793 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/cache.sv" Line 1. Module cache_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/main_mem.sv" Line 2. Module main_mem_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.srcs/sources_1/imports/SourceCode/mem.sv" Line 2. Module mem_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.BR_hisinfo
+Compiling module xil_defaultlib.BTB_default
+Compiling module xil_defaultlib.BHT_default
+Compiling module xil_defaultlib.BranchPrediction
+Compiling module xil_defaultlib.NPC_Generator
+Compiling module xil_defaultlib.PC_IF
+Compiling module xil_defaultlib.PC_ID
+Compiling module xil_defaultlib.InstructionCache
+Compiling module xil_defaultlib.IR_ID
+Compiling module xil_defaultlib.CSR_EX
+Compiling module xil_defaultlib.RegisterFile
+Compiling module xil_defaultlib.ControllerDecoder
+Compiling module xil_defaultlib.ImmExtend
+Compiling module xil_defaultlib.PC_EX
+Compiling module xil_defaultlib.BR_Target_EX
+Compiling module xil_defaultlib.Op1_EX
+Compiling module xil_defaultlib.Imm_EX
+Compiling module xil_defaultlib.Reg2_EX
+Compiling module xil_defaultlib.Addr_EX
+Compiling module xil_defaultlib.Ctrl_EX
+Compiling module xil_defaultlib.CSR_Regfile
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.BranchDecision
+Compiling module xil_defaultlib.Result_MEM
+Compiling module xil_defaultlib.Reg2_MEM
+Compiling module xil_defaultlib.Addr_MEM
+Compiling module xil_defaultlib.Ctrl_MEM
+Compiling module xil_defaultlib.mem_default
+Compiling module xil_defaultlib.main_mem_default
+Compiling module xil_defaultlib.cache_default
+Compiling module xil_defaultlib.DataExtend
+Compiling module xil_defaultlib.WB_Data_WB
+Compiling module xil_defaultlib.Addr_WB
+Compiling module xil_defaultlib.Ctrl_WB
+Compiling module xil_defaultlib.HarzardUnit
+Compiling module xil_defaultlib.RV32ICore
+Compiling module xil_defaultlib.cpu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/GitHub_local_repos/USTC-ComputerArchitecture-2020S/Lab4/Lab4/Lab4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_tb_behav -key {Behavioral:sim_1:Functional:cpu_tb} -tclbatch {cpu_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source cpu_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000us
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 808.070 ; gain = 1.406
+INFO: [Common 17-344] 'run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 808.070 ; gain = 4.086
+INFO: [Common 17-344] 'xsim' was cancelled
+INFO: [Vivado 12-5357] 'simulate' step aborted
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 808.070 ; gain = 4.086
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 14 14:25:50 2020...
